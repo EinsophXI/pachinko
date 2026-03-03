@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://124cy3kc160r"]
+
+[ext_resource type="Texture2D" uid="uid://baabxnth4hhbq" path="res://bucket pillar.jpg" id="1_i2xhv"]
+
+[node name="bucket pillar" type="StaticBody2D" unique_id=44306721]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=139087705]
+position = Vector2(-0.2641816, 74)
+scale = Vector2(0.2012568, 0.1641791)
+texture = ExtResource("1_i2xhv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=74989236]
+position = Vector2(-6, -49)
+polygon = PackedVector2Array(3, 58, 2, 59, 1, 60, 1, 185, 3, 187, 9, 187, 11, 186, 11, 60, 10, 59, 9, 58, 6, 57)

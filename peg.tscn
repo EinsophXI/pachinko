@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://chnbxd08rkekj"]
+
+[ext_resource type="Texture2D" uid="uid://b6lm1h8dnyth7" path="res://386-3866629_climbing-big-gray-circle.png" id="1_y34qd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y34qd"]
+bounce = 0.55
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p68sm"]
+radius = 4.0
+
+[node name="peg" type="StaticBody2D" unique_id=1578278439]
+physics_material_override = SubResource("PhysicsMaterial_y34qd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1564360193]
+shape = SubResource("CircleShape2D_p68sm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139926707]
+position = Vector2(5.9604645e-08, -5.9604645e-08)
+scale = Vector2(0.016500011, 0.016500011)
+texture = ExtResource("1_y34qd")

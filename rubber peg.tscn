@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6pnhtph27evs"]
+
+[ext_resource type="Texture2D" uid="uid://b0vlhqbjbnii0" path="res://Red-Circle-Transparent.png" id="1_usuqs"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_usuqs"]
+bounce = 0.4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_absav"]
+radius = 7.0
+
+[node name="rubber peg" type="StaticBody2D" unique_id=778489922]
+physics_material_override = SubResource("PhysicsMaterial_usuqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1448283974]
+shape = SubResource("CircleShape2D_absav")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613469916]
+position = Vector2(1.7763568e-15, 5.9604645e-08)
+scale = Vector2(0.026428225, 0.026428225)
+texture = ExtResource("1_usuqs")
