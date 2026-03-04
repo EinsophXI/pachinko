@@ -5,10 +5,11 @@
 [node name="bucket pillar" type="StaticBody2D" unique_id=44306721]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=139087705]
-position = Vector2(-0.2641816, 74)
-scale = Vector2(0.2012568, 0.1641791)
+position = Vector2(-2.0861626e-07, 73.99999)
+scale = Vector2(0.21052632, 0.1641791)
 texture = ExtResource("1_i2xhv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=74989236]
-position = Vector2(-6, -49)
-polygon = PackedVector2Array(3, 58, 2, 59, 1, 60, 1, 185, 3, 187, 9, 187, 11, 186, 11, 60, 10, 59, 9, 58, 6, 57)
+position = Vector2(-7.6250005, -49)
+scale = Vector2(1.1875, 1)
+polygon = PackedVector2Array(3.8947372, 58, 2.2105265, 59, 1.3684216, 60, 1.3684216, 187, 3.8947372, 188, 8.947369, 188, 11.473684, 187, 11.473684, 60, 10.631579, 59, 8.947369, 58, 6.421053, 57)
