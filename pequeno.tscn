@@ -1,38 +1,24 @@
 [gd_scene format=3 uid="uid://b5c0r5pc67lvc"]
 
-[ext_resource type="Script" uid="uid://blb1acxwlfn8g" path="res://pequeno.gd" id="1_5c2as"]
+[ext_resource type="Script" path="res://pequeno.gd" id="1_5c2as"]
 [ext_resource type="Texture2D" uid="uid://bsv5wq37v3tlh" path="res://Pachinko.jpg" id="1_444ph"]
-[ext_resource type="PackedScene" uid="uid://chnbxd08rkekj" path="res://peg.tscn" id="2_vhdn7"]
 [ext_resource type="Texture2D" uid="uid://b0vlhqbjbnii0" path="res://Red-Circle-Transparent.png" id="3_ql0tt"]
-[ext_resource type="Script" uid="uid://bbe7yw664xr7q" path="res://launch_zone.gd" id="4_ql0tt"]
-[ext_resource type="PackedScene" uid="uid://6pnhtph27evs" path="res://rubber peg.tscn" id="5_07k2c"]
-[ext_resource type="PackedScene" uid="uid://124cy3kc160r" path="res://bucket_pillar.tscn" id="6_1jkxi"]
+[ext_resource type="Script" path="res://launch_zone.gd" id="4_ql0tt"]
 [ext_resource type="Texture2D" uid="uid://8o0j33752nxl" path="res://pequeno blank.jpg" id="7_dom77"]
 [ext_resource type="Texture2D" uid="uid://b6lm1h8dnyth7" path="res://386-3866629_climbing-big-gray-circle.png" id="8_6fse3"]
-[ext_resource type="Script" uid="uid://bis2fe6ds255o" path="res://score_buckets.gd" id="9_6fse3"]
+[ext_resource type="PackedScene" uid="uid://buhq3cijjfc1d" path="res://New Body.tscn" id="8_6loxu"]
+[ext_resource type="Script" path="res://score_buckets.gd" id="9_6fse3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dom77"]
-friction = 0.1
+friction = 0.0
 bounce = 0.1
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yll8s"]
-size = Vector2(34, 551)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhdn7"]
-size = Vector2(29, 528)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ql0tt"]
-size = Vector2(30, 449)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_07k2c"]
-size = Vector2(720, 237.5)
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1jkxi"]
-friction = 0.1
-bounce = 0.2
+friction = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07k2c"]
-radius = 13.252358
+custom_solver_bias = 0.2
+radius = 15.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jkxi"]
 size = Vector2(21, 80.5)
@@ -51,53 +37,31 @@ texture = ExtResource("1_444ph")
 [node name="Machine walls" type="StaticBody2D" parent="." unique_id=31907263]
 physics_material_override = SubResource("PhysicsMaterial_dom77")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Machine walls" unique_id=651310753]
-polygon = PackedVector2Array(686, 186, 684, 168, 677, 140, 666, 113, 650, 87, 633, 67, 609, 47, 582, 32, 559, 22, 535, 16, 511, 12, 490, 12, 490, 1, 719, 2, 719, 187)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Machine walls" unique_id=452794541]
-position = Vector2(703, 460.5)
-shape = SubResource("RectangleShape2D_yll8s")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Machine walls" unique_id=391301556]
-position = Vector2(14.5, 472)
-shape = SubResource("RectangleShape2D_vhdn7")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Machine walls" unique_id=1953277856]
-position = Vector2(631, 467.5)
-shape = SubResource("RectangleShape2D_ql0tt")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Machine walls" unique_id=815282705]
-position = Vector2(360, 855.25)
-shape = SubResource("RectangleShape2D_07k2c")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Machine walls" unique_id=843882522]
-polygon = PackedVector2Array(29, 616, 647, 733, 647, 736, 29, 734)
-
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Machine walls" unique_id=1263666286]
-polygon = PackedVector2Array(2, 208, 29, 208, 29, 189, 32, 168, 38, 144, 47, 122, 58, 100, 71, 82, 85, 67, 100, 53, 118, 40, 135, 31, 154, 24, 177, 17, 194, 14, 490, 12, 490, 0, 1, 1)
+polygon = PackedVector2Array(0, 208, 32, 208, 32, 192, 32, 168, 38, 144, 47, 122, 58, 100, 71, 82, 85, 67, 100, 53, 118, 40, 135, 31, 154, 24, 177, 17, 192, 16, 488, 16, 488, 0, 0, 0)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Machine walls" unique_id=1705043935]
-polygon = PackedVector2Array(646, 243, 624, 190, 617, 190, 616, 243)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Machine walls" unique_id=949700318]
+polygon = PackedVector2Array(588, 0, 588, 32, 613, 37, 623, 41, 633, 48, 645, 58, 654, 67, 666, 83, 672, 94, 677, 107, 681, 124, 686, 147, 688, 168, 720, 168, 720, 69, 720, 0)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Machine walls" unique_id=608859058]
-polygon = PackedVector2Array(624, 190, 615, 157, 607, 132, 594, 108, 579, 90, 561, 71, 536, 58, 521, 54, 509, 52, 501, 53, 499, 59, 503, 64, 507, 65, 515, 66, 519, 65, 530, 70, 543, 76, 564, 94, 581, 118, 589, 133, 577, 143, 559, 161, 541, 180, 541, 185, 545, 190, 552, 190, 557, 185, 591, 153, 601, 165, 601, 180, 601, 187, 604, 190, 617, 190)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Machine walls" unique_id=1775488960]
+polygon = PackedVector2Array(656, 1008, 674, 1013, 677, 1024, 656, 1024)
 
 [node name="ball" type="RigidBody2D" parent="." unique_id=1665275433]
-position = Vector2(667, 568)
+position = Vector2(363, 149)
 physics_material_override = SubResource("PhysicsMaterial_1jkxi")
 gravity_scale = 1.421
 
 [node name="Sprite2D" type="Sprite2D" parent="ball" unique_id=1850784812]
-position = Vector2(0, 39)
-scale = Vector2(0.050781254, 0.050781254)
+position = Vector2(0, 40.00001)
+scale = Vector2(0.046874978, 0.04687489)
 texture = ExtResource("3_ql0tt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball" unique_id=1743864761]
-position = Vector2(0, 39)
+position = Vector2(0, 40)
 shape = SubResource("CircleShape2D_07k2c")
 
 [node name="Launch zone" type="Area2D" parent="." unique_id=1021615507]
-position = Vector2(675, 651)
+position = Vector2(675, 936)
 script = ExtResource("4_ql0tt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Launch zone" unique_id=1894546443]
@@ -111,325 +75,6 @@ position = Vector2(356, 393.00003)
 scale = Vector2(1.5768014, 1.5787863)
 texture = ExtResource("7_dom77")
 
-[node name="pegs" type="Node" parent="." unique_id=1749940307]
-
-[node name="peg10" parent="pegs" unique_id=1816947474 instance=ExtResource("2_vhdn7")]
-position = Vector2(40, 320)
-
-[node name="peg11" parent="pegs" unique_id=928879528 instance=ExtResource("2_vhdn7")]
-position = Vector2(56, 336)
-
-[node name="peg12" parent="pegs" unique_id=857447613 instance=ExtResource("2_vhdn7")]
-position = Vector2(124, 224)
-
-[node name="peg14" parent="pegs" unique_id=1690189958 instance=ExtResource("2_vhdn7")]
-position = Vector2(172, 224)
-
-[node name="peg15" parent="pegs" unique_id=103628809 instance=ExtResource("2_vhdn7")]
-position = Vector2(560, 280)
-
-[node name="peg17" parent="pegs" unique_id=1942419370 instance=ExtResource("2_vhdn7")]
-position = Vector2(48, 328)
-
-[node name="peg18" parent="pegs" unique_id=1269030285 instance=ExtResource("2_vhdn7")]
-position = Vector2(56, 432)
-
-[node name="peg19" parent="pegs" unique_id=1672442640 instance=ExtResource("2_vhdn7")]
-position = Vector2(64, 440)
-
-[node name="peg20" parent="pegs" unique_id=1721621924 instance=ExtResource("2_vhdn7")]
-position = Vector2(592, 432)
-
-[node name="peg21" parent="pegs" unique_id=430311736 instance=ExtResource("2_vhdn7")]
-position = Vector2(600, 424)
-
-[node name="peg22" parent="pegs" unique_id=1009567011 instance=ExtResource("2_vhdn7")]
-position = Vector2(104, 440)
-
-[node name="peg23" parent="pegs" unique_id=1526781290 instance=ExtResource("2_vhdn7")]
-position = Vector2(144, 440)
-
-[node name="peg24" parent="pegs" unique_id=118836769 instance=ExtResource("2_vhdn7")]
-position = Vector2(184, 440)
-
-[node name="peg25" parent="pegs" unique_id=1485425749 instance=ExtResource("2_vhdn7")]
-position = Vector2(224, 440)
-
-[node name="peg26" parent="pegs" unique_id=825414886 instance=ExtResource("2_vhdn7")]
-position = Vector2(264, 440)
-
-[node name="peg27" parent="pegs" unique_id=1301911626 instance=ExtResource("2_vhdn7")]
-position = Vector2(304, 440)
-
-[node name="peg28" parent="pegs" unique_id=582970107 instance=ExtResource("2_vhdn7")]
-position = Vector2(344, 440)
-
-[node name="peg29" parent="pegs" unique_id=1596673839 instance=ExtResource("2_vhdn7")]
-position = Vector2(384, 440)
-
-[node name="peg30" parent="pegs" unique_id=935569626 instance=ExtResource("2_vhdn7")]
-position = Vector2(424, 440)
-
-[node name="peg31" parent="pegs" unique_id=289607597 instance=ExtResource("2_vhdn7")]
-position = Vector2(464, 440)
-
-[node name="peg32" parent="pegs" unique_id=226116179 instance=ExtResource("2_vhdn7")]
-position = Vector2(504, 440)
-
-[node name="peg13" parent="pegs" unique_id=191499249 instance=ExtResource("2_vhdn7")]
-position = Vector2(608, 416)
-
-[node name="peg2" parent="pegs" unique_id=1703182171 instance=ExtResource("2_vhdn7")]
-position = Vector2(84, 392)
-
-[node name="peg3" parent="pegs" unique_id=764382213 instance=ExtResource("2_vhdn7")]
-position = Vector2(124, 392)
-
-[node name="peg4" parent="pegs" unique_id=330121459 instance=ExtResource("2_vhdn7")]
-position = Vector2(544, 440)
-
-[node name="peg5" parent="pegs" unique_id=1258162969 instance=ExtResource("2_vhdn7")]
-position = Vector2(584, 440)
-
-[node name="peg33" parent="pegs" unique_id=803891788 instance=ExtResource("2_vhdn7")]
-position = Vector2(176, 280)
-
-[node name="peg34" parent="pegs" unique_id=183621240 instance=ExtResource("2_vhdn7")]
-position = Vector2(128, 280)
-
-[node name="peg35" parent="pegs" unique_id=1496375921 instance=ExtResource("2_vhdn7")]
-position = Vector2(224, 280)
-
-[node name="peg36" parent="pegs" unique_id=1613788587 instance=ExtResource("2_vhdn7")]
-position = Vector2(272, 280)
-
-[node name="peg37" parent="pegs" unique_id=88930583 instance=ExtResource("2_vhdn7")]
-position = Vector2(320, 280)
-
-[node name="peg38" parent="pegs" unique_id=360084959 instance=ExtResource("2_vhdn7")]
-position = Vector2(368, 280)
-
-[node name="peg39" parent="pegs" unique_id=1827188493 instance=ExtResource("2_vhdn7")]
-position = Vector2(416, 280)
-
-[node name="peg40" parent="pegs" unique_id=184182717 instance=ExtResource("2_vhdn7")]
-position = Vector2(464, 280)
-
-[node name="peg41" parent="pegs" unique_id=2057124869 instance=ExtResource("2_vhdn7")]
-position = Vector2(512, 280)
-
-[node name="peg42" parent="pegs" unique_id=2081271842 instance=ExtResource("2_vhdn7")]
-position = Vector2(80, 280)
-
-[node name="peg43" parent="pegs" unique_id=1599672101 instance=ExtResource("2_vhdn7")]
-position = Vector2(316, 224)
-
-[node name="peg44" parent="pegs" unique_id=997644198 instance=ExtResource("2_vhdn7")]
-position = Vector2(104, 336)
-
-[node name="peg45" parent="pegs" unique_id=1842831486 instance=ExtResource("2_vhdn7")]
-position = Vector2(152, 336)
-
-[node name="peg46" parent="pegs" unique_id=140547794 instance=ExtResource("2_vhdn7")]
-position = Vector2(200, 336)
-
-[node name="peg47" parent="pegs" unique_id=547705603 instance=ExtResource("2_vhdn7")]
-position = Vector2(248, 336)
-
-[node name="peg48" parent="pegs" unique_id=641098716 instance=ExtResource("2_vhdn7")]
-position = Vector2(296, 336)
-
-[node name="peg49" parent="pegs" unique_id=712639480 instance=ExtResource("2_vhdn7")]
-position = Vector2(344, 336)
-
-[node name="peg50" parent="pegs" unique_id=575620285 instance=ExtResource("2_vhdn7")]
-position = Vector2(392, 336)
-
-[node name="peg51" parent="pegs" unique_id=872428937 instance=ExtResource("2_vhdn7")]
-position = Vector2(440, 336)
-
-[node name="peg52" parent="pegs" unique_id=1193510046 instance=ExtResource("2_vhdn7")]
-position = Vector2(488, 336)
-
-[node name="peg53" parent="pegs" unique_id=2137164928 instance=ExtResource("2_vhdn7")]
-position = Vector2(536, 336)
-
-[node name="peg54" parent="pegs" unique_id=264562191 instance=ExtResource("2_vhdn7")]
-position = Vector2(584, 336)
-
-[node name="peg55" parent="pegs" unique_id=2146369453 instance=ExtResource("2_vhdn7")]
-position = Vector2(592, 328)
-
-[node name="peg56" parent="pegs" unique_id=231313719 instance=ExtResource("2_vhdn7")]
-position = Vector2(600, 320)
-
-[node name="peg57" parent="pegs" unique_id=74610736 instance=ExtResource("2_vhdn7")]
-position = Vector2(608, 312)
-
-[node name="peg58" parent="pegs" unique_id=1470301987 instance=ExtResource("2_vhdn7")]
-position = Vector2(32, 312)
-
-[node name="peg59" parent="pegs" unique_id=1577674943 instance=ExtResource("2_vhdn7")]
-position = Vector2(164, 392)
-
-[node name="peg60" parent="pegs" unique_id=1451688975 instance=ExtResource("2_vhdn7")]
-position = Vector2(204, 392)
-
-[node name="peg61" parent="pegs" unique_id=785912747 instance=ExtResource("2_vhdn7")]
-position = Vector2(244, 392)
-
-[node name="peg62" parent="pegs" unique_id=1332141561 instance=ExtResource("2_vhdn7")]
-position = Vector2(284, 392)
-
-[node name="peg63" parent="pegs" unique_id=91077622 instance=ExtResource("2_vhdn7")]
-position = Vector2(324, 392)
-
-[node name="peg64" parent="pegs" unique_id=1898450918 instance=ExtResource("2_vhdn7")]
-position = Vector2(364, 392)
-
-[node name="peg65" parent="pegs" unique_id=1480170944 instance=ExtResource("2_vhdn7")]
-position = Vector2(404, 392)
-
-[node name="peg66" parent="pegs" unique_id=637136572 instance=ExtResource("2_vhdn7")]
-position = Vector2(444, 392)
-
-[node name="peg67" parent="pegs" unique_id=1343424974 instance=ExtResource("2_vhdn7")]
-position = Vector2(484, 392)
-
-[node name="peg68" parent="pegs" unique_id=1996664464 instance=ExtResource("2_vhdn7")]
-position = Vector2(524, 392)
-
-[node name="peg69" parent="pegs" unique_id=672892063 instance=ExtResource("2_vhdn7")]
-position = Vector2(564, 392)
-
-[node name="peg6" parent="pegs" unique_id=398513141 instance=ExtResource("2_vhdn7")]
-position = Vector2(76, 224)
-
-[node name="peg74" parent="pegs" unique_id=862435543 instance=ExtResource("2_vhdn7")]
-position = Vector2(220, 224)
-
-[node name="peg75" parent="pegs" unique_id=1258094278 instance=ExtResource("2_vhdn7")]
-position = Vector2(268, 224)
-
-[node name="peg76" parent="pegs" unique_id=1927235491 instance=ExtResource("2_vhdn7")]
-position = Vector2(364, 224)
-
-[node name="peg77" parent="pegs" unique_id=1803187383 instance=ExtResource("2_vhdn7")]
-position = Vector2(412, 224)
-
-[node name="peg78" parent="pegs" unique_id=1376544744 instance=ExtResource("2_vhdn7")]
-position = Vector2(460, 224)
-
-[node name="peg79" parent="pegs" unique_id=945399616 instance=ExtResource("2_vhdn7")]
-position = Vector2(508, 224)
-
-[node name="peg80" parent="pegs" unique_id=702151936 instance=ExtResource("2_vhdn7")]
-position = Vector2(556, 224)
-
-[node name="peg7" parent="pegs" unique_id=400283794 instance=ExtResource("2_vhdn7")]
-position = Vector2(48, 424)
-
-[node name="peg8" parent="pegs" unique_id=425283499 instance=ExtResource("2_vhdn7")]
-position = Vector2(40, 416)
-
-[node name="peg9" parent="pegs" unique_id=640634781 instance=ExtResource("2_vhdn7")]
-position = Vector2(32, 408)
-
-[node name="peg16" parent="pegs" unique_id=1578278439 instance=ExtResource("2_vhdn7")]
-position = Vector2(40, 208)
-
-[node name="peg71" parent="pegs" unique_id=176610893 instance=ExtResource("2_vhdn7")]
-position = Vector2(48, 216)
-
-[node name="peg72" parent="pegs" unique_id=78183394 instance=ExtResource("2_vhdn7")]
-position = Vector2(32, 200)
-
-[node name="rubber pegs" type="Node" parent="." unique_id=2008714137]
-
-[node name="rubber peg2" parent="rubber pegs" unique_id=673508229 instance=ExtResource("5_07k2c")]
-position = Vector2(56, 136)
-
-[node name="rubber peg3" parent="rubber pegs" unique_id=701490612 instance=ExtResource("5_07k2c")]
-position = Vector2(88, 168)
-
-[node name="rubber peg4" parent="rubber pegs" unique_id=568270039 instance=ExtResource("5_07k2c")]
-position = Vector2(104, 184)
-
-[node name="rubber peg5" parent="rubber pegs" unique_id=1966902908 instance=ExtResource("5_07k2c")]
-position = Vector2(152, 184)
-
-[node name="rubber peg6" parent="rubber pegs" unique_id=1676978179 instance=ExtResource("5_07k2c")]
-position = Vector2(200, 184)
-
-[node name="rubber peg8" parent="rubber pegs" unique_id=467580665 instance=ExtResource("5_07k2c")]
-position = Vector2(248, 184)
-
-[node name="rubber peg17" parent="rubber pegs" unique_id=2063634355 instance=ExtResource("5_07k2c")]
-position = Vector2(296, 184)
-
-[node name="rubber peg18" parent="rubber pegs" unique_id=1174389082 instance=ExtResource("5_07k2c")]
-position = Vector2(344, 184)
-
-[node name="rubber peg19" parent="rubber pegs" unique_id=1978469865 instance=ExtResource("5_07k2c")]
-position = Vector2(392, 184)
-
-[node name="rubber peg20" parent="rubber pegs" unique_id=489786233 instance=ExtResource("5_07k2c")]
-position = Vector2(440, 184)
-
-[node name="rubber peg21" parent="rubber pegs" unique_id=482857528 instance=ExtResource("5_07k2c")]
-position = Vector2(488, 184)
-
-[node name="rubber peg7" parent="rubber pegs" unique_id=604705217 instance=ExtResource("5_07k2c")]
-position = Vector2(560, 168)
-
-[node name="rubber peg9" parent="rubber pegs" unique_id=322466680 instance=ExtResource("5_07k2c")]
-position = Vector2(576, 152)
-
-[node name="rubber peg" parent="rubber pegs" unique_id=778489922 instance=ExtResource("5_07k2c")]
-position = Vector2(72, 152)
-
-[node name="rubber peg10" parent="rubber pegs" unique_id=1620742899 instance=ExtResource("5_07k2c")]
-position = Vector2(607, 156)
-
-[node name="rubber peg11" parent="rubber pegs" unique_id=1424666047 instance=ExtResource("5_07k2c")]
-position = Vector2(602, 142)
-
-[node name="rubber peg12" parent="rubber pegs" unique_id=1452793909 instance=ExtResource("5_07k2c")]
-position = Vector2(596, 128)
-
-[node name="rubber peg13" parent="rubber pegs" unique_id=1507492832 instance=ExtResource("5_07k2c")]
-position = Vector2(588, 114)
-
-[node name="rubber peg14" parent="rubber pegs" unique_id=1497097275 instance=ExtResource("5_07k2c")]
-position = Vector2(579, 102)
-
-[node name="rubber peg15" parent="rubber pegs" unique_id=1501453043 instance=ExtResource("5_07k2c")]
-position = Vector2(569, 90)
-
-[node name="rubber peg16" parent="rubber pegs" unique_id=784900411 instance=ExtResource("5_07k2c")]
-position = Vector2(559, 79)
-
-[node name="rubber peg22" parent="rubber pegs" unique_id=615437465 instance=ExtResource("5_07k2c")]
-position = Vector2(547, 71)
-
-[node name="rubber peg23" parent="rubber pegs" unique_id=638709904 instance=ExtResource("5_07k2c")]
-position = Vector2(534, 65)
-
-[node name="rubber peg24" parent="rubber pegs" unique_id=512246617 instance=ExtResource("5_07k2c")]
-position = Vector2(520, 61)
-
-[node name="rubber peg25" parent="rubber pegs" unique_id=1349720220 instance=ExtResource("5_07k2c")]
-position = Vector2(506, 58)
-
-[node name="rubber peg26" parent="rubber pegs" unique_id=23381211 instance=ExtResource("5_07k2c")]
-position = Vector2(611, 171)
-
-[node name="rubber peg27" parent="rubber pegs" unique_id=787520412 instance=ExtResource("5_07k2c")]
-position = Vector2(615, 188)
-
-[node name="rubber peg28" parent="rubber pegs" unique_id=1185560845 instance=ExtResource("5_07k2c")]
-position = Vector2(544, 184)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=633569302]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1181022508]
@@ -440,10 +85,10 @@ offset_bottom = 126.0
 text = "Score: 0"
 
 [node name="PowerBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1478603036]
-offset_left = 241.99988
-offset_top = 57.999985
-offset_right = 753.9999
-offset_bottom = 570.0
+offset_left = 500.00006
+offset_top = 1101.0
+offset_right = 1012.00006
+offset_bottom = 1613.0
 scale = Vector2(0.15300807, 0.15300807)
 max_value = 300.0
 texture_under = ExtResource("8_6fse3")
@@ -452,155 +97,122 @@ tint_under = Color(1, 1, 0, 1)
 tint_over = Color(1, 0, 1, 1)
 tint_progress = Color(0, 1, 1, 1)
 
-[node name="bucket pillars" type="Node" parent="." unique_id=532478941]
-
-[node name="bucket pillar2" parent="bucket pillars" unique_id=275171114 instance=ExtResource("6_1jkxi")]
-position = Vector2(104, 440)
-
-[node name="bucket pillar3" parent="bucket pillars" unique_id=2130933039 instance=ExtResource("6_1jkxi")]
-position = Vector2(144, 440)
-
-[node name="bucket pillar4" parent="bucket pillars" unique_id=635310392 instance=ExtResource("6_1jkxi")]
-position = Vector2(184, 440)
-
-[node name="bucket pillar5" parent="bucket pillars" unique_id=20323225 instance=ExtResource("6_1jkxi")]
-position = Vector2(224, 440)
-
-[node name="bucket pillar6" parent="bucket pillars" unique_id=1579283621 instance=ExtResource("6_1jkxi")]
-position = Vector2(264, 440)
-
-[node name="bucket pillar7" parent="bucket pillars" unique_id=2043941211 instance=ExtResource("6_1jkxi")]
-position = Vector2(304, 440)
-
-[node name="bucket pillar8" parent="bucket pillars" unique_id=1438661497 instance=ExtResource("6_1jkxi")]
-position = Vector2(344, 440)
-
-[node name="bucket pillar9" parent="bucket pillars" unique_id=1655052167 instance=ExtResource("6_1jkxi")]
-position = Vector2(384, 440)
-
-[node name="bucket pillar10" parent="bucket pillars" unique_id=1237810273 instance=ExtResource("6_1jkxi")]
-position = Vector2(424, 440)
-
-[node name="bucket pillar11" parent="bucket pillars" unique_id=1049548278 instance=ExtResource("6_1jkxi")]
-position = Vector2(464, 440)
-
-[node name="bucket pillar12" parent="bucket pillars" unique_id=1493086803 instance=ExtResource("6_1jkxi")]
-position = Vector2(504, 440)
-
-[node name="bucket pillar13" parent="bucket pillars" unique_id=2019622165 instance=ExtResource("6_1jkxi")]
-position = Vector2(584, 440)
-
-[node name="bucket pillar14" parent="bucket pillars" unique_id=1026943773 instance=ExtResource("6_1jkxi")]
-position = Vector2(544, 440)
-
-[node name="bucket pillar" parent="bucket pillars" unique_id=44306721 instance=ExtResource("6_1jkxi")]
-position = Vector2(64, 440)
-
 [node name="Score Buckets" type="Node" parent="." unique_id=1927040458]
 
 [node name="Score Buckets" type="Area2D" parent="Score Buckets" unique_id=1068425449]
-position = Vector2(523, 499)
+position = Vector2(512, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets" unique_id=1053748770]
-position = Vector2(0, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets2" type="Area2D" parent="Score Buckets" unique_id=1413844373]
-position = Vector2(483, 499)
+position = Vector2(472, 812)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets2" unique_id=1012830843]
-position = Vector2(0, 1)
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets3" type="Area2D" parent="Score Buckets" unique_id=1247858720]
-position = Vector2(523, 499)
+position = Vector2(432, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets3" unique_id=220946595]
-position = Vector2(41, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets4" type="Area2D" parent="Score Buckets" unique_id=586184069]
-position = Vector2(523, 499)
+position = Vector2(392, 812)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets4" unique_id=1699978549]
-position = Vector2(-79, 0)
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets5" type="Area2D" parent="Score Buckets" unique_id=2139118508]
-position = Vector2(362, 499)
+position = Vector2(312, 808)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets5" unique_id=1166279706]
-position = Vector2(0, 1)
+position = Vector2(0, 24)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets6" type="Area2D" parent="Score Buckets" unique_id=1140250363]
-position = Vector2(322, 499)
+position = Vector2(352, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets6" unique_id=714181770]
-position = Vector2(0, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets7" type="Area2D" parent="Score Buckets" unique_id=523598094]
-position = Vector2(362, 499)
+position = Vector2(272, 812)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets7" unique_id=1754940732]
-position = Vector2(41, 1)
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets8" type="Area2D" parent="Score Buckets" unique_id=1265233724]
-position = Vector2(362, 499)
+position = Vector2(232, 812)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets8" unique_id=1201623292]
-position = Vector2(-79, 0)
-shape = SubResource("RectangleShape2D_n005f")
-
-[node name="Score Buckets9" type="Area2D" parent="Score Buckets" unique_id=2120284285]
-position = Vector2(322, 499)
-script = ExtResource("9_6fse3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets9" unique_id=1529016264]
-position = Vector2(-79, 0)
+position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets10" type="Area2D" parent="Score Buckets" unique_id=2135936312]
-position = Vector2(161, 499)
+position = Vector2(152, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets10" unique_id=1044317291]
-position = Vector2(0, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets11" type="Area2D" parent="Score Buckets" unique_id=1368051684]
-position = Vector2(121, 499)
+position = Vector2(112, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets11" unique_id=331420937]
-position = Vector2(0, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets12" type="Area2D" parent="Score Buckets" unique_id=183999512]
-position = Vector2(161, 499)
+position = Vector2(192, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets12" unique_id=102298706]
-position = Vector2(41, 1)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
 
 [node name="Score Buckets13" type="Area2D" parent="Score Buckets" unique_id=729900712]
-position = Vector2(161, 499)
+position = Vector2(72, 816)
 script = ExtResource("9_6fse3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets13" unique_id=213979258]
-position = Vector2(-79, 0)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_n005f")
+
+[node name="Score Buckets14" type="Area2D" parent="Score Buckets" unique_id=850308423]
+position = Vector2(552, 816)
+script = ExtResource("9_6fse3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets14" unique_id=128925722]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_n005f")
+
+[node name="Score Buckets15" type="Area2D" parent="Score Buckets" unique_id=1536323215]
+position = Vector2(592, 816)
+script = ExtResource("9_6fse3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score Buckets/Score Buckets15" unique_id=2004893409]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_n005f")
+
+[node name="New Body" parent="." unique_id=1556306142 instance=ExtResource("8_6loxu")]
+position = Vector2(-5, -53)
 
 [connection signal="body_entered" from="Launch zone" to="Launch zone" method="_on_body_entered"]
 [connection signal="body_exited" from="Launch zone" to="Launch zone" method="_on_body_exited"]

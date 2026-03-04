@@ -1,0 +1,555 @@
+[gd_scene format=3 uid="uid://buhq3cijjfc1d"]
+
+[ext_resource type="Texture2D" uid="uid://baabxnth4hhbq" path="res://bucket pillar.jpg" id="1_6vglj"]
+[ext_resource type="PackedScene" uid="uid://6pnhtph27evs" path="res://rubber peg.tscn" id="1_wc3rn"]
+[ext_resource type="PackedScene" uid="uid://chnbxd08rkekj" path="res://peg.tscn" id="2_wc3rn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vkpny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4k44"]
+size = Vector2(32, 1280)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vglj"]
+size = Vector2(656, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc3rn"]
+size = Vector2(656, 32)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_leq6l"]
+normal = Vector2(0, 1)
+distance = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akdbl"]
+size = Vector2(24, 768)
+
+[node name="New Body" type="Node2D" unique_id=1556306142]
+
+[node name="Node" type="Node" parent="." unique_id=1496515338]
+
+[node name="outer shell" type="StaticBody2D" parent="Node" unique_id=580000596]
+physics_material_override = SubResource("PhysicsMaterial_vkpny")
+
+[node name="Left wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=350719356]
+position = Vector2(16, 640)
+shape = SubResource("RectangleShape2D_a4k44")
+
+[node name="Right wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=1706102866]
+position = Vector2(704, 640)
+shape = SubResource("RectangleShape2D_a4k44")
+
+[node name="Bottom wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=662554632]
+position = Vector2(360, 1056)
+shape = SubResource("RectangleShape2D_6vglj")
+
+[node name="Top wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=833195772]
+position = Vector2(360, 16)
+shape = SubResource("RectangleShape2D_wc3rn")
+
+[node name="Top boundary" type="CollisionShape2D" parent="Node/outer shell" unique_id=899139621]
+position = Vector2(352, -24)
+shape = SubResource("WorldBoundaryShape2D_leq6l")
+
+[node name="Inner right wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=2126771315]
+position = Vector2(644, 576)
+shape = SubResource("RectangleShape2D_akdbl")
+
+[node name="inner shell" type="StaticBody2D" parent="Node" unique_id=1662009412]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node/inner shell" unique_id=925133829]
+polygon = PackedVector2Array(32, 1024, 32, 920, 632, 1000, 656, 1008, 656, 1024)
+
+[node name="Buckets" type="Node" parent="Node" unique_id=1810686594]
+
+[node name="Pillar" type="Sprite2D" parent="Node/Buckets" unique_id=139407091]
+position = Vector2(92, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar2" type="Sprite2D" parent="Node/Buckets" unique_id=651356186]
+position = Vector2(252, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar3" type="Sprite2D" parent="Node/Buckets" unique_id=1717740866]
+position = Vector2(212, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar4" type="Sprite2D" parent="Node/Buckets" unique_id=613250711]
+position = Vector2(172, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar5" type="Sprite2D" parent="Node/Buckets" unique_id=2095839192]
+position = Vector2(132, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar6" type="Sprite2D" parent="Node/Buckets" unique_id=1539959684]
+position = Vector2(532, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar7" type="Sprite2D" parent="Node/Buckets" unique_id=1228027132]
+position = Vector2(492, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar8" type="Sprite2D" parent="Node/Buckets" unique_id=1883279965]
+position = Vector2(452, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar9" type="Sprite2D" parent="Node/Buckets" unique_id=1248135313]
+position = Vector2(412.00003, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar10" type="Sprite2D" parent="Node/Buckets" unique_id=1824027494]
+position = Vector2(372, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar11" type="Sprite2D" parent="Node/Buckets" unique_id=620393193]
+position = Vector2(332, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar12" type="Sprite2D" parent="Node/Buckets" unique_id=337735537]
+position = Vector2(292, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar13" type="Sprite2D" parent="Node/Buckets" unique_id=460011268]
+position = Vector2(612, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar14" type="Sprite2D" parent="Node/Buckets" unique_id=23867638]
+position = Vector2(572, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="Pillar15" type="Sprite2D" parent="Node/Buckets" unique_id=749479747]
+position = Vector2(52, 828)
+scale = Vector2(0.14035091, 0.039719194)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar" type="Sprite2D" parent="Node/Buckets" unique_id=42089827]
+position = Vector2(72, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar2" type="Sprite2D" parent="Node/Buckets" unique_id=84125814]
+position = Vector2(112, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar3" type="Sprite2D" parent="Node/Buckets" unique_id=43982636]
+position = Vector2(552, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar4" type="Sprite2D" parent="Node/Buckets" unique_id=1062453738]
+position = Vector2(512, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar5" type="Sprite2D" parent="Node/Buckets" unique_id=312746485]
+position = Vector2(471.99997, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar6" type="Sprite2D" parent="Node/Buckets" unique_id=192643030]
+position = Vector2(431.99997, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar7" type="Sprite2D" parent="Node/Buckets" unique_id=1686716136]
+position = Vector2(392, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar8" type="Sprite2D" parent="Node/Buckets" unique_id=638604692]
+position = Vector2(352, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar9" type="Sprite2D" parent="Node/Buckets" unique_id=1001749138]
+position = Vector2(312, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar10" type="Sprite2D" parent="Node/Buckets" unique_id=1287482318]
+position = Vector2(272, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar11" type="Sprite2D" parent="Node/Buckets" unique_id=1221014767]
+position = Vector2(232, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar12" type="Sprite2D" parent="Node/Buckets" unique_id=95521175]
+position = Vector2(191.99998, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar13" type="Sprite2D" parent="Node/Buckets" unique_id=157861200]
+position = Vector2(152, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="BucketPillar14" type="Sprite2D" parent="Node/Buckets" unique_id=1354748656]
+position = Vector2(592, 864)
+scale = Vector2(0.70175445, 0.050995175)
+texture = ExtResource("1_6vglj")
+
+[node name="Rubber Pegs" type="Node" parent="Node" unique_id=1016486081]
+
+[node name="rubber peg" parent="Node/Rubber Pegs" unique_id=778489922 instance=ExtResource("1_wc3rn")]
+position = Vector2(170, 392)
+
+[node name="rubber peg2" parent="Node/Rubber Pegs" unique_id=1067245967 instance=ExtResource("1_wc3rn")]
+position = Vector2(224, 392)
+
+[node name="rubber peg3" parent="Node/Rubber Pegs" unique_id=1671713172 instance=ExtResource("1_wc3rn")]
+position = Vector2(278, 392)
+
+[node name="rubber peg4" parent="Node/Rubber Pegs" unique_id=724429393 instance=ExtResource("1_wc3rn")]
+position = Vector2(332, 392)
+
+[node name="rubber peg5" parent="Node/Rubber Pegs" unique_id=1389846515 instance=ExtResource("1_wc3rn")]
+position = Vector2(386, 392)
+
+[node name="rubber peg6" parent="Node/Rubber Pegs" unique_id=846955555 instance=ExtResource("1_wc3rn")]
+position = Vector2(440, 392)
+
+[node name="rubber peg7" parent="Node/Rubber Pegs" unique_id=42899265 instance=ExtResource("1_wc3rn")]
+position = Vector2(602, 392)
+
+[node name="rubber peg8" parent="Node/Rubber Pegs" unique_id=1471703079 instance=ExtResource("1_wc3rn")]
+position = Vector2(494, 392)
+
+[node name="rubber peg9" parent="Node/Rubber Pegs" unique_id=1839407671 instance=ExtResource("1_wc3rn")]
+position = Vector2(548, 392)
+
+[node name="rubber peg12" parent="Node/Rubber Pegs" unique_id=1079517894 instance=ExtResource("1_wc3rn")]
+position = Vector2(116, 392)
+
+[node name="rubber peg13" parent="Node/Rubber Pegs" unique_id=1004284984 instance=ExtResource("1_wc3rn")]
+position = Vector2(140, 312)
+
+[node name="rubber peg14" parent="Node/Rubber Pegs" unique_id=815384638 instance=ExtResource("1_wc3rn")]
+position = Vector2(188, 312)
+
+[node name="rubber peg15" parent="Node/Rubber Pegs" unique_id=1463696964 instance=ExtResource("1_wc3rn")]
+position = Vector2(236, 312)
+
+[node name="rubber peg17" parent="Node/Rubber Pegs" unique_id=2130500173 instance=ExtResource("1_wc3rn")]
+position = Vector2(284, 312)
+
+[node name="rubber peg18" parent="Node/Rubber Pegs" unique_id=996557597 instance=ExtResource("1_wc3rn")]
+position = Vector2(332, 312)
+
+[node name="rubber peg19" parent="Node/Rubber Pegs" unique_id=16933477 instance=ExtResource("1_wc3rn")]
+position = Vector2(380, 312)
+
+[node name="rubber peg20" parent="Node/Rubber Pegs" unique_id=1513526674 instance=ExtResource("1_wc3rn")]
+position = Vector2(428, 312)
+
+[node name="rubber peg21" parent="Node/Rubber Pegs" unique_id=320172352 instance=ExtResource("1_wc3rn")]
+position = Vector2(476, 312)
+
+[node name="rubber peg24" parent="Node/Rubber Pegs" unique_id=1570233245 instance=ExtResource("1_wc3rn")]
+position = Vector2(524, 312)
+
+[node name="rubber peg25" parent="Node/Rubber Pegs" unique_id=351912768 instance=ExtResource("1_wc3rn")]
+position = Vector2(44, 264)
+
+[node name="rubber peg26" parent="Node/Rubber Pegs" unique_id=2066878330 instance=ExtResource("1_wc3rn")]
+position = Vector2(76, 296)
+
+[node name="rubber peg27" parent="Node/Rubber Pegs" unique_id=926428474 instance=ExtResource("1_wc3rn")]
+position = Vector2(92, 312)
+
+[node name="rubber peg30" parent="Node/Rubber Pegs" unique_id=667283761 instance=ExtResource("1_wc3rn")]
+position = Vector2(588, 296)
+
+[node name="rubber peg31" parent="Node/Rubber Pegs" unique_id=516910572 instance=ExtResource("1_wc3rn")]
+position = Vector2(604, 280)
+
+[node name="rubber peg32" parent="Node/Rubber Pegs" unique_id=1975152202 instance=ExtResource("1_wc3rn")]
+position = Vector2(60, 280)
+
+[node name="rubber peg33" parent="Node/Rubber Pegs" unique_id=3911970 instance=ExtResource("1_wc3rn")]
+position = Vector2(572, 312)
+
+[node name="rubber peg34" parent="Node/Rubber Pegs" unique_id=1270945837 instance=ExtResource("1_wc3rn")]
+position = Vector2(620, 264)
+
+[node name="rubber peg10" parent="Node/Rubber Pegs" unique_id=61293596 instance=ExtResource("1_wc3rn")]
+position = Vector2(62, 392)
+
+[node name="rubber peg11" parent="Node/Rubber Pegs" unique_id=1730858165 instance=ExtResource("1_wc3rn")]
+position = Vector2(44, 376)
+
+[node name="rubber peg16" parent="Node/Rubber Pegs" unique_id=1522846223 instance=ExtResource("1_wc3rn")]
+position = Vector2(620, 376)
+
+[node name="Pegs" type="Node" parent="Node" unique_id=662370531]
+
+[node name="peg" parent="Node/Pegs" unique_id=1578278439 instance=ExtResource("2_wc3rn")]
+position = Vector2(52, 808)
+
+[node name="peg2" parent="Node/Pegs" unique_id=608096815 instance=ExtResource("2_wc3rn")]
+position = Vector2(92, 808)
+
+[node name="peg3" parent="Node/Pegs" unique_id=1035429777 instance=ExtResource("2_wc3rn")]
+position = Vector2(132, 808)
+
+[node name="peg4" parent="Node/Pegs" unique_id=1216547142 instance=ExtResource("2_wc3rn")]
+position = Vector2(172, 808)
+
+[node name="peg5" parent="Node/Pegs" unique_id=1005186394 instance=ExtResource("2_wc3rn")]
+position = Vector2(212, 808)
+
+[node name="peg6" parent="Node/Pegs" unique_id=1133877121 instance=ExtResource("2_wc3rn")]
+position = Vector2(252, 808)
+
+[node name="peg7" parent="Node/Pegs" unique_id=828218235 instance=ExtResource("2_wc3rn")]
+position = Vector2(292, 808)
+
+[node name="peg8" parent="Node/Pegs" unique_id=1231164374 instance=ExtResource("2_wc3rn")]
+position = Vector2(332, 808)
+
+[node name="peg9" parent="Node/Pegs" unique_id=937575811 instance=ExtResource("2_wc3rn")]
+position = Vector2(372, 808)
+
+[node name="peg10" parent="Node/Pegs" unique_id=1690924949 instance=ExtResource("2_wc3rn")]
+position = Vector2(412, 808)
+
+[node name="peg11" parent="Node/Pegs" unique_id=1194121296 instance=ExtResource("2_wc3rn")]
+position = Vector2(452, 808)
+
+[node name="peg12" parent="Node/Pegs" unique_id=349783075 instance=ExtResource("2_wc3rn")]
+position = Vector2(492, 808)
+
+[node name="peg13" parent="Node/Pegs" unique_id=1440911180 instance=ExtResource("2_wc3rn")]
+position = Vector2(532, 808)
+
+[node name="peg14" parent="Node/Pegs" unique_id=16312453 instance=ExtResource("2_wc3rn")]
+position = Vector2(572, 808)
+
+[node name="peg15" parent="Node/Pegs" unique_id=348118521 instance=ExtResource("2_wc3rn")]
+position = Vector2(612, 808)
+
+[node name="peg16" parent="Node/Pegs" unique_id=1022498267 instance=ExtResource("2_wc3rn")]
+position = Vector2(44, 800)
+
+[node name="peg17" parent="Node/Pegs" unique_id=879998672 instance=ExtResource("2_wc3rn")]
+position = Vector2(36, 792)
+
+[node name="peg18" parent="Node/Pegs" unique_id=1331695870 instance=ExtResource("2_wc3rn")]
+position = Vector2(620, 800)
+
+[node name="peg19" parent="Node/Pegs" unique_id=105084948 instance=ExtResource("2_wc3rn")]
+position = Vector2(628, 792)
+
+[node name="peg73" parent="Node/Pegs" unique_id=782904365 instance=ExtResource("2_wc3rn")]
+position = Vector2(52, 648)
+
+[node name="peg74" parent="Node/Pegs" unique_id=1405493926 instance=ExtResource("2_wc3rn")]
+position = Vector2(92, 648)
+
+[node name="peg75" parent="Node/Pegs" unique_id=818400101 instance=ExtResource("2_wc3rn")]
+position = Vector2(132, 648)
+
+[node name="peg76" parent="Node/Pegs" unique_id=409969455 instance=ExtResource("2_wc3rn")]
+position = Vector2(172, 648)
+
+[node name="peg77" parent="Node/Pegs" unique_id=1218561068 instance=ExtResource("2_wc3rn")]
+position = Vector2(212, 648)
+
+[node name="peg78" parent="Node/Pegs" unique_id=1415476002 instance=ExtResource("2_wc3rn")]
+position = Vector2(252, 648)
+
+[node name="peg79" parent="Node/Pegs" unique_id=1117368212 instance=ExtResource("2_wc3rn")]
+position = Vector2(292, 648)
+
+[node name="peg80" parent="Node/Pegs" unique_id=767116185 instance=ExtResource("2_wc3rn")]
+position = Vector2(332, 648)
+
+[node name="peg81" parent="Node/Pegs" unique_id=376352164 instance=ExtResource("2_wc3rn")]
+position = Vector2(372, 648)
+
+[node name="peg82" parent="Node/Pegs" unique_id=1317505847 instance=ExtResource("2_wc3rn")]
+position = Vector2(412, 648)
+
+[node name="peg83" parent="Node/Pegs" unique_id=144724817 instance=ExtResource("2_wc3rn")]
+position = Vector2(452, 648)
+
+[node name="peg84" parent="Node/Pegs" unique_id=695823651 instance=ExtResource("2_wc3rn")]
+position = Vector2(492, 648)
+
+[node name="peg85" parent="Node/Pegs" unique_id=2054406437 instance=ExtResource("2_wc3rn")]
+position = Vector2(532, 648)
+
+[node name="peg20" parent="Node/Pegs" unique_id=45988145 instance=ExtResource("2_wc3rn")]
+position = Vector2(52, 488)
+
+[node name="peg21" parent="Node/Pegs" unique_id=40171993 instance=ExtResource("2_wc3rn")]
+position = Vector2(92, 488)
+
+[node name="peg22" parent="Node/Pegs" unique_id=1975596040 instance=ExtResource("2_wc3rn")]
+position = Vector2(132, 488)
+
+[node name="peg23" parent="Node/Pegs" unique_id=1814608428 instance=ExtResource("2_wc3rn")]
+position = Vector2(172, 488)
+
+[node name="peg24" parent="Node/Pegs" unique_id=1150198146 instance=ExtResource("2_wc3rn")]
+position = Vector2(212, 488)
+
+[node name="peg25" parent="Node/Pegs" unique_id=1929708454 instance=ExtResource("2_wc3rn")]
+position = Vector2(252, 488)
+
+[node name="peg26" parent="Node/Pegs" unique_id=1731410749 instance=ExtResource("2_wc3rn")]
+position = Vector2(292, 488)
+
+[node name="peg27" parent="Node/Pegs" unique_id=1054118419 instance=ExtResource("2_wc3rn")]
+position = Vector2(332, 488)
+
+[node name="peg28" parent="Node/Pegs" unique_id=1810587638 instance=ExtResource("2_wc3rn")]
+position = Vector2(372, 488)
+
+[node name="peg29" parent="Node/Pegs" unique_id=1037314076 instance=ExtResource("2_wc3rn")]
+position = Vector2(412, 488)
+
+[node name="peg30" parent="Node/Pegs" unique_id=2118445461 instance=ExtResource("2_wc3rn")]
+position = Vector2(452, 488)
+
+[node name="peg31" parent="Node/Pegs" unique_id=1110640533 instance=ExtResource("2_wc3rn")]
+position = Vector2(492, 488)
+
+[node name="peg32" parent="Node/Pegs" unique_id=1284868292 instance=ExtResource("2_wc3rn")]
+position = Vector2(532, 488)
+
+[node name="peg33" parent="Node/Pegs" unique_id=1432117289 instance=ExtResource("2_wc3rn")]
+position = Vector2(572, 488)
+
+[node name="peg34" parent="Node/Pegs" unique_id=702387376 instance=ExtResource("2_wc3rn")]
+position = Vector2(612, 488)
+
+[node name="peg35" parent="Node/Pegs" unique_id=2072677618 instance=ExtResource("2_wc3rn")]
+position = Vector2(620, 480)
+
+[node name="peg36" parent="Node/Pegs" unique_id=1089599369 instance=ExtResource("2_wc3rn")]
+position = Vector2(628, 472)
+
+[node name="peg37" parent="Node/Pegs" unique_id=749575612 instance=ExtResource("2_wc3rn")]
+position = Vector2(44, 480)
+
+[node name="peg38" parent="Node/Pegs" unique_id=693355004 instance=ExtResource("2_wc3rn")]
+position = Vector2(36, 472)
+
+[node name="peg39" parent="Node/Pegs" unique_id=377707620 instance=ExtResource("2_wc3rn")]
+position = Vector2(72, 568)
+
+[node name="peg40" parent="Node/Pegs" unique_id=2057189995 instance=ExtResource("2_wc3rn")]
+position = Vector2(112, 568)
+
+[node name="peg41" parent="Node/Pegs" unique_id=1740647227 instance=ExtResource("2_wc3rn")]
+position = Vector2(152, 568)
+
+[node name="peg42" parent="Node/Pegs" unique_id=1092470324 instance=ExtResource("2_wc3rn")]
+position = Vector2(192, 568)
+
+[node name="peg43" parent="Node/Pegs" unique_id=1118602029 instance=ExtResource("2_wc3rn")]
+position = Vector2(232, 568)
+
+[node name="peg44" parent="Node/Pegs" unique_id=1630698820 instance=ExtResource("2_wc3rn")]
+position = Vector2(272, 568)
+
+[node name="peg45" parent="Node/Pegs" unique_id=2110865792 instance=ExtResource("2_wc3rn")]
+position = Vector2(312, 568)
+
+[node name="peg46" parent="Node/Pegs" unique_id=922090838 instance=ExtResource("2_wc3rn")]
+position = Vector2(352, 568)
+
+[node name="peg47" parent="Node/Pegs" unique_id=84820335 instance=ExtResource("2_wc3rn")]
+position = Vector2(392, 568)
+
+[node name="peg48" parent="Node/Pegs" unique_id=890292507 instance=ExtResource("2_wc3rn")]
+position = Vector2(432, 568)
+
+[node name="peg49" parent="Node/Pegs" unique_id=592296406 instance=ExtResource("2_wc3rn")]
+position = Vector2(472, 568)
+
+[node name="peg50" parent="Node/Pegs" unique_id=421825615 instance=ExtResource("2_wc3rn")]
+position = Vector2(512, 568)
+
+[node name="peg51" parent="Node/Pegs" unique_id=1193068325 instance=ExtResource("2_wc3rn")]
+position = Vector2(552, 568)
+
+[node name="peg52" parent="Node/Pegs" unique_id=262457920 instance=ExtResource("2_wc3rn")]
+position = Vector2(592, 568)
+
+[node name="peg53" parent="Node/Pegs" unique_id=1632281044 instance=ExtResource("2_wc3rn")]
+position = Vector2(572, 648)
+
+[node name="peg54" parent="Node/Pegs" unique_id=1901238622 instance=ExtResource("2_wc3rn")]
+position = Vector2(612, 648)
+
+[node name="peg55" parent="Node/Pegs" unique_id=1995502095 instance=ExtResource("2_wc3rn")]
+position = Vector2(620, 640)
+
+[node name="peg56" parent="Node/Pegs" unique_id=1531675574 instance=ExtResource("2_wc3rn")]
+position = Vector2(628, 632)
+
+[node name="peg57" parent="Node/Pegs" unique_id=996890732 instance=ExtResource("2_wc3rn")]
+position = Vector2(44, 640)
+
+[node name="peg58" parent="Node/Pegs" unique_id=1291502024 instance=ExtResource("2_wc3rn")]
+position = Vector2(36, 632)
+
+[node name="peg59" parent="Node/Pegs" unique_id=1192720761 instance=ExtResource("2_wc3rn")]
+position = Vector2(72, 728)
+
+[node name="peg60" parent="Node/Pegs" unique_id=1187458707 instance=ExtResource("2_wc3rn")]
+position = Vector2(112, 728)
+
+[node name="peg61" parent="Node/Pegs" unique_id=1574479068 instance=ExtResource("2_wc3rn")]
+position = Vector2(152, 728)
+
+[node name="peg62" parent="Node/Pegs" unique_id=518290507 instance=ExtResource("2_wc3rn")]
+position = Vector2(192, 728)
+
+[node name="peg63" parent="Node/Pegs" unique_id=292710248 instance=ExtResource("2_wc3rn")]
+position = Vector2(232, 728)
+
+[node name="peg64" parent="Node/Pegs" unique_id=646244473 instance=ExtResource("2_wc3rn")]
+position = Vector2(272, 728)
+
+[node name="peg65" parent="Node/Pegs" unique_id=701728477 instance=ExtResource("2_wc3rn")]
+position = Vector2(352, 728)
+
+[node name="peg66" parent="Node/Pegs" unique_id=168148441 instance=ExtResource("2_wc3rn")]
+position = Vector2(392, 728)
+
+[node name="peg67" parent="Node/Pegs" unique_id=882570415 instance=ExtResource("2_wc3rn")]
+position = Vector2(432, 728)
+
+[node name="peg68" parent="Node/Pegs" unique_id=212241144 instance=ExtResource("2_wc3rn")]
+position = Vector2(472, 728)
+
+[node name="peg69" parent="Node/Pegs" unique_id=738239676 instance=ExtResource("2_wc3rn")]
+position = Vector2(512, 728)
+
+[node name="peg70" parent="Node/Pegs" unique_id=2072674803 instance=ExtResource("2_wc3rn")]
+position = Vector2(552, 728)
+
+[node name="peg71" parent="Node/Pegs" unique_id=792760936 instance=ExtResource("2_wc3rn")]
+position = Vector2(312, 728)
+
+[node name="peg72" parent="Node/Pegs" unique_id=1389549768 instance=ExtResource("2_wc3rn")]
+position = Vector2(592, 728)

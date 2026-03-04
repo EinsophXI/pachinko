@@ -15,6 +15,6 @@ physics_material_override = SubResource("PhysicsMaterial_usuqs")
 shape = SubResource("CircleShape2D_absav")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613469916]
-position = Vector2(1.7763568e-15, 5.9604645e-08)
-scale = Vector2(0.026428225, 0.026428225)
+position = Vector2(-9.23872e-07, 1.6391277e-07)
+scale = Vector2(0.027343748, 0.02734375)
 texture = ExtResource("1_usuqs")
