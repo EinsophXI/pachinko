@@ -20,7 +20,13 @@ normal = Vector2(0, 1)
 distance = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akdbl"]
-size = Vector2(24, 768)
+size = Vector2(24, 834)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wc3rn"]
+bounce = 0.6
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_leq6l"]
+bounce = 0.79
 
 [node name="New Body" type="Node2D" unique_id=1556306142]
 
@@ -38,7 +44,7 @@ position = Vector2(704, 640)
 shape = SubResource("RectangleShape2D_a4k44")
 
 [node name="Bottom wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=662554632]
-position = Vector2(360, 1056)
+position = Vector2(360, 1120)
 shape = SubResource("RectangleShape2D_6vglj")
 
 [node name="Top wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=833195772]
@@ -50,13 +56,14 @@ position = Vector2(352, -24)
 shape = SubResource("WorldBoundaryShape2D_leq6l")
 
 [node name="Inner right wall" type="CollisionShape2D" parent="Node/outer shell" unique_id=2126771315]
-position = Vector2(644, 576)
+position = Vector2(644, 609)
 shape = SubResource("RectangleShape2D_akdbl")
 
 [node name="inner shell" type="StaticBody2D" parent="Node" unique_id=1662009412]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node/inner shell" unique_id=925133829]
-polygon = PackedVector2Array(32, 1024, 32, 920, 632, 1000, 656, 1008, 656, 1024)
+position = Vector2(0, 64)
+polygon = PackedVector2Array(32, 1024, 32, 960, 657, 1001, 666, 1001, 677, 1002, 688, 1000, 688, 1024, 607, 1024)
 
 [node name="Buckets" type="Node" parent="Node" unique_id=1810686594]
 
@@ -301,48 +308,63 @@ position = Vector2(620, 376)
 
 [node name="peg" parent="Node/Pegs" unique_id=1578278439 instance=ExtResource("2_wc3rn")]
 position = Vector2(52, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg2" parent="Node/Pegs" unique_id=608096815 instance=ExtResource("2_wc3rn")]
 position = Vector2(92, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg3" parent="Node/Pegs" unique_id=1035429777 instance=ExtResource("2_wc3rn")]
 position = Vector2(132, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg4" parent="Node/Pegs" unique_id=1216547142 instance=ExtResource("2_wc3rn")]
 position = Vector2(172, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg5" parent="Node/Pegs" unique_id=1005186394 instance=ExtResource("2_wc3rn")]
 position = Vector2(212, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg6" parent="Node/Pegs" unique_id=1133877121 instance=ExtResource("2_wc3rn")]
 position = Vector2(252, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg7" parent="Node/Pegs" unique_id=828218235 instance=ExtResource("2_wc3rn")]
 position = Vector2(292, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg8" parent="Node/Pegs" unique_id=1231164374 instance=ExtResource("2_wc3rn")]
 position = Vector2(332, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg9" parent="Node/Pegs" unique_id=937575811 instance=ExtResource("2_wc3rn")]
 position = Vector2(372, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg10" parent="Node/Pegs" unique_id=1690924949 instance=ExtResource("2_wc3rn")]
 position = Vector2(412, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg11" parent="Node/Pegs" unique_id=1194121296 instance=ExtResource("2_wc3rn")]
 position = Vector2(452, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg12" parent="Node/Pegs" unique_id=349783075 instance=ExtResource("2_wc3rn")]
 position = Vector2(492, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg13" parent="Node/Pegs" unique_id=1440911180 instance=ExtResource("2_wc3rn")]
 position = Vector2(532, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg14" parent="Node/Pegs" unique_id=16312453 instance=ExtResource("2_wc3rn")]
 position = Vector2(572, 808)
+physics_material_override = SubResource("PhysicsMaterial_leq6l")
 
 [node name="peg15" parent="Node/Pegs" unique_id=348118521 instance=ExtResource("2_wc3rn")]
 position = Vector2(612, 808)
+physics_material_override = SubResource("PhysicsMaterial_wc3rn")
 
 [node name="peg16" parent="Node/Pegs" unique_id=1022498267 instance=ExtResource("2_wc3rn")]
 position = Vector2(44, 800)

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b0vlhqbjbnii0" path="res://Red-Circle-Transparent.png" id="1_usuqs"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_usuqs"]
-bounce = 0.4
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_absav"]
 radius = 7.0

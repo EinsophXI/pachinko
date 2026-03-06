@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://d3sdnxcxbplwg"]
+
+[ext_resource type="Script" uid="uid://dnjj3pcoisml8" path="res://h_box_container.gd" id="1_7i4or"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7i4or"]
+size = Vector2(16, 8)
+
+[node name="Node2D" type="Node2D" unique_id=283393711]
+
+[node name="Buckets" type="Node2D" parent="." unique_id=597599698]
+
+[node name="Tracker 1" type="Area2D" parent="Buckets" unique_id=1859543739]
+position = Vector2(8, 40)
+
+[node name="Distr tracker 1" type="CollisionShape2D" parent="Buckets/Tracker 1" unique_id=236584545]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 2" type="Area2D" parent="Buckets" unique_id=1082452834]
+position = Vector2(24, 40)
+
+[node name="Distr tracker 2" type="CollisionShape2D" parent="Buckets/Tracker 2" unique_id=968998123]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 3" type="Area2D" parent="Buckets" unique_id=784752681]
+position = Vector2(40, 40)
+
+[node name="Distr tracker 3" type="CollisionShape2D" parent="Buckets/Tracker 3" unique_id=1596791732]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 4" type="Area2D" parent="Buckets" unique_id=2058386139]
+position = Vector2(56, 40)
+
+[node name="Distr tracker 4" type="CollisionShape2D" parent="Buckets/Tracker 4" unique_id=39795665]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 5" type="Area2D" parent="Buckets" unique_id=52055626]
+position = Vector2(72, 40)
+
+[node name="Distr tracker 5" type="CollisionShape2D" parent="Buckets/Tracker 5" unique_id=1678726319]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 6" type="Area2D" parent="Buckets" unique_id=737733704]
+position = Vector2(88, 40)
+
+[node name="Distr tracker 6" type="CollisionShape2D" parent="Buckets/Tracker 6" unique_id=783121976]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 7" type="Area2D" parent="Buckets" unique_id=2054967206]
+position = Vector2(104, 40)
+
+[node name="Distr tracker 7" type="CollisionShape2D" parent="Buckets/Tracker 7" unique_id=1037668385]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 8" type="Area2D" parent="Buckets" unique_id=1060497383]
+position = Vector2(120, 40)
+
+[node name="Distr tracker 8" type="CollisionShape2D" parent="Buckets/Tracker 8" unique_id=1966624530]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 9" type="Area2D" parent="Buckets" unique_id=2046287495]
+position = Vector2(136, 40)
+
+[node name="Distr tracker 9" type="CollisionShape2D" parent="Buckets/Tracker 9" unique_id=2027163291]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 10" type="Area2D" parent="Buckets" unique_id=1272849502]
+position = Vector2(152, 40)
+
+[node name="Distr tracker 10" type="CollisionShape2D" parent="Buckets/Tracker 10" unique_id=1218212556]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 11" type="Area2D" parent="Buckets" unique_id=46640419]
+position = Vector2(168, 40)
+
+[node name="Distr tracker 11" type="CollisionShape2D" parent="Buckets/Tracker 11" unique_id=1503137141]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 12" type="Area2D" parent="Buckets" unique_id=2017199430]
+position = Vector2(184, 40)
+
+[node name="Distr tracker 12" type="CollisionShape2D" parent="Buckets/Tracker 12" unique_id=1699615013]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 13" type="Area2D" parent="Buckets" unique_id=2038568181]
+position = Vector2(200, 40)
+
+[node name="Distr tracker 13" type="CollisionShape2D" parent="Buckets/Tracker 13" unique_id=1197080730]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="Tracker 14" type="Area2D" parent="Buckets" unique_id=1722924906]
+position = Vector2(216, 40)
+
+[node name="Distr tracker 14" type="CollisionShape2D" parent="Buckets/Tracker 14" unique_id=740252337]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_7i4or")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1261621678]
+anchors_preset = -1
+anchor_left = 0.32200003
+anchor_top = 0.89800006
+anchor_right = 0.32200003
+anchor_bottom = 0.89800006
+offset_left = -143.84003
+offset_top = -12.440063
+offset_right = -73.84003
+offset_bottom = 22.559937
+alignment = 2
+script = ExtResource("1_7i4or")
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=191564]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=58456397]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=581129117]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer" unique_id=438351340]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer" unique_id=1320060202]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect6" type="ColorRect" parent="HBoxContainer" unique_id=689194162]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect7" type="ColorRect" parent="HBoxContainer" unique_id=667155934]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect8" type="ColorRect" parent="HBoxContainer" unique_id=350310871]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect9" type="ColorRect" parent="HBoxContainer" unique_id=748850530]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect10" type="ColorRect" parent="HBoxContainer" unique_id=794669291]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect11" type="ColorRect" parent="HBoxContainer" unique_id=988819927]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect12" type="ColorRect" parent="HBoxContainer" unique_id=536667745]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect13" type="ColorRect" parent="HBoxContainer" unique_id=1498018569]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect14" type="ColorRect" parent="HBoxContainer" unique_id=47216066]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
