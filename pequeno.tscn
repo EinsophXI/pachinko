@@ -15,7 +15,7 @@ friction = 0.0
 bounce = 0.1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fd86j"]
-size = Vector2(623.125, 10)
+size = Vector2(623.125, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jkxi"]
 size = Vector2(14.5, 20)
@@ -25,6 +25,12 @@ size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n005f"]
 size = Vector2(21, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jf1qg"]
+size = Vector2(32, 896)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1mvt"]
+size = Vector2(32, 145)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6loxu"]
 bounce = 1.0
@@ -37,43 +43,64 @@ size = Vector2(5, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4twe"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xawfe"]
+size = Vector2(572, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bj2a"]
+size = Vector2(14, 926)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axnes"]
+size = Vector2(557, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8tqm"]
+size = Vector2(8, 33)
+
 [node name="Pachinko" type="Node2D" unique_id=1538005789]
 script = ExtResource("1_5c2as")
 ball_scene = ExtResource("7_5c2as")
-bucket_yields = Array[int]([0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+bucket_yields = Array[int]([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50])
 
 [node name="Machine walls" type="StaticBody2D" parent="." unique_id=31907263]
 physics_material_override = SubResource("PhysicsMaterial_dom77")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Machine walls" unique_id=1263666286]
+position = Vector2(576, 0)
 polygon = PackedVector2Array(0, 208, 32, 208, 32, 192, 32, 168, 38, 144, 47, 122, 58, 100, 71, 82, 85, 67, 100, 53, 118, 40, 135, 31, 154, 24, 177, 17, 192, 16, 488, 16, 488, 0, 0, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Machine walls" unique_id=949700318]
+position = Vector2(576, 0)
 polygon = PackedVector2Array(588, 0, 588, 32, 613, 37, 623, 41, 633, 48, 645, 58, 654, 67, 666, 83, 672, 94, 677, 107, 681, 124, 686, 147, 688, 168, 720, 168, 720, 69, 720, 0)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Machine walls" unique_id=485468370]
+position = Vector2(576, 0)
 polygon = PackedVector2Array(632, 192, 656, 191, 656, 192)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Machine walls" unique_id=99693936]
+position = Vector2(576, 0)
 polygon = PackedVector2Array(656, 192, 656, 191, 688, 180, 688, 192, 656, 192)
 one_way_collision = true
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Machine walls" unique_id=1624870779]
-position = Vector2(-8, -20)
+position = Vector2(568, -20)
 polygon = PackedVector2Array(640, 212, 651, 76, 678, 110)
 one_way_collision = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Machine walls" unique_id=1123278057]
-position = Vector2(332, 892)
+position = Vector2(908, 891.5)
 rotation = 3.1415925
 shape = SubResource("RectangleShape2D_fd86j")
 one_way_collision = true
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Machine walls" unique_id=14472068]
-polygon = PackedVector2Array(648, 1032, 632, 1032, 92, 990, 630, 973)
+position = Vector2(574, 0)
+polygon = PackedVector2Array(648, 1032, 632, 1032, 66, 992, 584.86816, 984.6405, 614.1033, 984.2256, 634, 964)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Machine walls" unique_id=1865343752]
+position = Vector2(574, 0)
+polygon = PackedVector2Array(0, 926, 598, 952, 0, 960)
 
 [node name="Launch zone" type="Area2D" parent="." unique_id=1021615507]
-position = Vector2(676, 936)
+position = Vector2(1252, 936)
 script = ExtResource("4_ql0tt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Launch zone" unique_id=1894546443]
@@ -83,16 +110,16 @@ shape = SubResource("RectangleShape2D_1jkxi")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=633569302]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1181022508]
-offset_left = 116.0
+offset_left = 692.0
 offset_top = 103.0
-offset_right = 177.0
+offset_right = 753.0
 offset_bottom = 126.0
 text = "Score: 0"
 
 [node name="PowerBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1478603036]
-offset_left = 641.0
+offset_left = 1217.0
 offset_top = 1101.0001
-offset_right = 1153.0
+offset_right = 1729.0
 offset_bottom = 1613.0001
 scale = Vector2(0.15300807, 0.15300807)
 max_value = 300.0
@@ -108,9 +135,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -313.0
+offset_left = 480.0
 offset_top = -165.0
-offset_right = 264.0
+offset_right = 960.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -129,7 +156,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -146,7 +176,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -163,7 +196,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -180,7 +216,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -197,7 +236,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -214,7 +256,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -231,7 +276,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -248,7 +296,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -265,7 +316,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -282,7 +336,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -299,7 +356,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -316,7 +376,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -333,7 +396,10 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
@@ -350,107 +416,117 @@ color = Color(0.091039844, 0.16261569, 0.33069757, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -1.0
+offset_bottom = 26.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0"
 horizontal_alignment = 1
 
+[node name="ToggleGateButton" type="Button" parent="CanvasLayer" unique_id=1753434367]
+offset_left = 475.0
+offset_top = 961.0
+offset_right = 574.0
+offset_bottom = 992.0
+text = "Toggle Gate"
+
 [node name="Buckets" type="Node2D" parent="." unique_id=617142625]
 
 [node name="Tracker 1" type="Area2D" parent="Buckets" unique_id=25506892]
-position = Vector2(72, 840)
+position = Vector2(648, 840)
 
 [node name="Distr tracker 1" type="CollisionShape2D" parent="Buckets/Tracker 1" unique_id=1510196599]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 2" type="Area2D" parent="Buckets" unique_id=150610528]
-position = Vector2(112, 840)
+position = Vector2(688, 840)
 
 [node name="Distr tracker 2" type="CollisionShape2D" parent="Buckets/Tracker 2" unique_id=461981353]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 3" type="Area2D" parent="Buckets" unique_id=1368360175]
-position = Vector2(152, 840)
+position = Vector2(728, 840)
 
 [node name="Distr tracker 3" type="CollisionShape2D" parent="Buckets/Tracker 3" unique_id=1741080466]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 4" type="Area2D" parent="Buckets" unique_id=2057232032]
-position = Vector2(192, 840)
+position = Vector2(768, 840)
 
 [node name="Distr tracker 4" type="CollisionShape2D" parent="Buckets/Tracker 4" unique_id=906304762]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 5" type="Area2D" parent="Buckets" unique_id=475689475]
-position = Vector2(232, 840)
+position = Vector2(808, 840)
 
 [node name="Distr tracker 5" type="CollisionShape2D" parent="Buckets/Tracker 5" unique_id=404480701]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 6" type="Area2D" parent="Buckets" unique_id=1808367892]
-position = Vector2(272, 840)
+position = Vector2(848, 840)
 
 [node name="Distr tracker 6" type="CollisionShape2D" parent="Buckets/Tracker 6" unique_id=269113333]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 7" type="Area2D" parent="Buckets" unique_id=1908333477]
-position = Vector2(312, 840)
+position = Vector2(888, 840)
 
 [node name="Distr tracker 7" type="CollisionShape2D" parent="Buckets/Tracker 7" unique_id=313004070]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 8" type="Area2D" parent="Buckets" unique_id=92413986]
-position = Vector2(352, 840)
+position = Vector2(928, 840)
 
 [node name="Distr tracker 8" type="CollisionShape2D" parent="Buckets/Tracker 8" unique_id=1911694633]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 9" type="Area2D" parent="Buckets" unique_id=1625092062]
-position = Vector2(392, 840)
+position = Vector2(968, 840)
 
 [node name="Distr tracker 9" type="CollisionShape2D" parent="Buckets/Tracker 9" unique_id=1459146963]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 10" type="Area2D" parent="Buckets" unique_id=1959510840]
-position = Vector2(432, 840)
+position = Vector2(1008, 840)
 
 [node name="Distr tracker 10" type="CollisionShape2D" parent="Buckets/Tracker 10" unique_id=202533884]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 11" type="Area2D" parent="Buckets" unique_id=715746929]
-position = Vector2(472, 840)
+position = Vector2(1048, 840)
 
 [node name="Distr tracker 11" type="CollisionShape2D" parent="Buckets/Tracker 11" unique_id=1136949037]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 12" type="Area2D" parent="Buckets" unique_id=1605700670]
-position = Vector2(512, 840)
+position = Vector2(1088, 840)
 
 [node name="Distr tracker 12" type="CollisionShape2D" parent="Buckets/Tracker 12" unique_id=1958960043]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 13" type="Area2D" parent="Buckets" unique_id=1474140044]
-position = Vector2(552, 840)
+position = Vector2(1128, 840)
 
 [node name="Distr tracker 13" type="CollisionShape2D" parent="Buckets/Tracker 13" unique_id=1248959594]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_5c2as")
 
 [node name="Tracker 14" type="Area2D" parent="Buckets" unique_id=1526620478]
-position = Vector2(592, 840)
+position = Vector2(1168, 840)
 
 [node name="Distr tracker 14" type="CollisionShape2D" parent="Buckets/Tracker 14" unique_id=646494235]
 position = Vector2(0, -12)
@@ -459,7 +535,7 @@ shape = SubResource("RectangleShape2D_5c2as")
 [node name="Score Buckets" type="Node" parent="." unique_id=1927040458]
 
 [node name="Score Bucket 1" type="Area2D" parent="Score Buckets" unique_id=729900712]
-position = Vector2(72, 822)
+position = Vector2(648, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -468,8 +544,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 1" unique_id=1977924638]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 2" type="Area2D" parent="Score Buckets" unique_id=1368051684]
-position = Vector2(112, 822)
+position = Vector2(688, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -478,8 +561,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 2" unique_id=23275412]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 3" type="Area2D" parent="Score Buckets" unique_id=2135936312]
-position = Vector2(152, 822)
+position = Vector2(728, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -488,8 +578,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 3" unique_id=1437332599]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 4" type="Area2D" parent="Score Buckets" unique_id=183999512]
-position = Vector2(192, 822)
+position = Vector2(768, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -498,8 +595,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 4" unique_id=528523939]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 5" type="Area2D" parent="Score Buckets" unique_id=1265233724]
-position = Vector2(232, 822)
+position = Vector2(808, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -508,8 +612,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 5" unique_id=302279389]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 6" type="Area2D" parent="Score Buckets" unique_id=523598094]
-position = Vector2(272, 822)
+position = Vector2(848, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -518,8 +629,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 6" unique_id=1737758296]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 7" type="Area2D" parent="Score Buckets" unique_id=2139118508]
-position = Vector2(312, 822)
+position = Vector2(888, 822)
 script = ExtResource("9_6fse3")
 balls_to_spawn = 0
 ball_scene = ExtResource("7_5c2as")
@@ -528,8 +646,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 7" unique_id=1005651422]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 8" type="Area2D" parent="Score Buckets" unique_id=1140250363]
-position = Vector2(352, 822)
+position = Vector2(928, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -537,8 +662,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 8" unique_id=757278456]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 9" type="Area2D" parent="Score Buckets" unique_id=586184069]
-position = Vector2(392, 822)
+position = Vector2(968, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -546,8 +678,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 9" unique_id=1548611526]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 10" type="Area2D" parent="Score Buckets" unique_id=1247858720]
-position = Vector2(432, 822)
+position = Vector2(1008, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -555,8 +694,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 10" unique_id=1254876853]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 11" type="Area2D" parent="Score Buckets" unique_id=1413844373]
-position = Vector2(472, 822)
+position = Vector2(1048, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -564,8 +710,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 11" unique_id=206746316]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 12" type="Area2D" parent="Score Buckets" unique_id=1068425449]
-position = Vector2(512, 822)
+position = Vector2(1088, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -573,8 +726,15 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 12" unique_id=20466168]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 13" type="Area2D" parent="Score Buckets" unique_id=850308423]
-position = Vector2(552, 822)
+position = Vector2(1128, 822)
 script = ExtResource("9_6fse3")
 ball_scene = ExtResource("7_5c2as")
 
@@ -582,16 +742,483 @@ ball_scene = ExtResource("7_5c2as")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 13" unique_id=2080993020]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="Score Bucket 14" type="Area2D" parent="Score Buckets" unique_id=1536323215]
-position = Vector2(592, 822)
+position = Vector2(1168, 822)
 
 [node name="Score tracker 14" type="CollisionShape2D" parent="Score Buckets/Score Bucket 14" unique_id=2004893409]
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_n005f")
 
+[node name="Label" type="Label" parent="Score Buckets/Score Bucket 14" unique_id=274630426]
+z_index = 1
+offset_left = -11.0
+offset_top = 28.0
+offset_right = 29.0
+offset_bottom = 51.0
+
 [node name="New Body" parent="." unique_id=1556306142 instance=ExtResource("8_6loxu")]
+visible = false
 z_index = -6
 position = Vector2(105, 14)
+
+[node name="outer shell" parent="New Body/Node" parent_id_path=PackedInt32Array(1556306142, 1496515338) index="0" unique_id=580000596]
+position = Vector2(576, 0)
+
+[node name="Left wall" parent="New Body/Node/outer shell" index="0" unique_id=350719356]
+position = Vector2(16, 448)
+shape = SubResource("RectangleShape2D_jf1qg")
+
+[node name="Right wall" parent="New Body/Node/outer shell" index="1" unique_id=1706102866]
+position = Vector2(704, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="New Body/Node/outer shell" index="6" unique_id=1706960492]
+position = Vector2(16, 1079.5)
+shape = SubResource("RectangleShape2D_q1mvt")
+
+[node name="inner shell" parent="New Body/Node" parent_id_path=PackedInt32Array(1556306142, 1496515338) index="1" unique_id=1662009412]
+position = Vector2(576, 0)
+
+[node name="CollisionPolygon2D" parent="New Body/Node/inner shell" index="0" unique_id=925133829]
+polygon = PackedVector2Array(32, 1024, 30, 940, 57.603035, 961.67957, 657, 1001, 666, 1001, 677, 1002, 688, 1000, 688, 1024, 607, 1024)
+
+[node name="Pillar" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="0" unique_id=139407091]
+position = Vector2(668, 828)
+
+[node name="Pillar2" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="1" unique_id=651356186]
+position = Vector2(828, 828)
+
+[node name="Pillar3" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="2" unique_id=1717740866]
+position = Vector2(788, 828)
+
+[node name="Pillar4" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="3" unique_id=613250711]
+position = Vector2(748, 828)
+
+[node name="Pillar5" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="4" unique_id=2095839192]
+position = Vector2(708, 828)
+
+[node name="Pillar6" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="5" unique_id=1539959684]
+position = Vector2(1108, 828)
+
+[node name="Pillar7" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="6" unique_id=1228027132]
+position = Vector2(1068, 828)
+
+[node name="Pillar8" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="7" unique_id=1883279965]
+position = Vector2(1028, 828)
+
+[node name="Pillar9" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="8" unique_id=1248135313]
+position = Vector2(988, 828)
+
+[node name="Pillar10" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="9" unique_id=1824027494]
+position = Vector2(948, 828)
+
+[node name="Pillar11" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="10" unique_id=620393193]
+position = Vector2(908, 828)
+
+[node name="Pillar12" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="11" unique_id=337735537]
+position = Vector2(868, 828)
+
+[node name="Pillar13" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="12" unique_id=460011268]
+position = Vector2(1188, 828)
+
+[node name="Pillar14" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="13" unique_id=23867638]
+position = Vector2(1148, 828)
+
+[node name="Pillar15" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="14" unique_id=749479747]
+position = Vector2(628, 828)
+
+[node name="BucketPillar" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="15" unique_id=42089827]
+position = Vector2(648, 864)
+
+[node name="BucketPillar2" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="16" unique_id=84125814]
+position = Vector2(688, 864)
+
+[node name="BucketPillar3" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="17" unique_id=43982636]
+position = Vector2(1128, 864)
+
+[node name="BucketPillar4" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="18" unique_id=1062453738]
+position = Vector2(1088, 864)
+
+[node name="BucketPillar5" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="19" unique_id=312746485]
+position = Vector2(1048, 864)
+
+[node name="BucketPillar6" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="20" unique_id=192643030]
+position = Vector2(1008, 864)
+
+[node name="BucketPillar7" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="21" unique_id=1686716136]
+position = Vector2(968, 864)
+
+[node name="BucketPillar8" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="22" unique_id=638604692]
+position = Vector2(928, 864)
+
+[node name="BucketPillar9" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="23" unique_id=1001749138]
+position = Vector2(888, 864)
+
+[node name="BucketPillar10" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="24" unique_id=1287482318]
+position = Vector2(848, 864)
+
+[node name="BucketPillar11" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="25" unique_id=1221014767]
+position = Vector2(808, 864)
+
+[node name="BucketPillar12" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="26" unique_id=95521175]
+position = Vector2(768, 864)
+
+[node name="BucketPillar13" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="27" unique_id=157861200]
+position = Vector2(728, 864)
+
+[node name="BucketPillar14" parent="New Body/Node/Buckets" parent_id_path=PackedInt32Array(1556306142, 1810686594) index="28" unique_id=1354748656]
+position = Vector2(1168, 864)
+
+[node name="rubber peg" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="0" unique_id=778489922]
+position = Vector2(746, 392)
+
+[node name="rubber peg2" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="1" unique_id=1067245967]
+position = Vector2(800, 392)
+
+[node name="rubber peg3" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="2" unique_id=1671713172]
+position = Vector2(854, 392)
+
+[node name="rubber peg4" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="3" unique_id=724429393]
+position = Vector2(908, 392)
+
+[node name="rubber peg5" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="4" unique_id=1389846515]
+position = Vector2(962, 392)
+
+[node name="rubber peg6" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="5" unique_id=846955555]
+position = Vector2(1016, 392)
+
+[node name="rubber peg7" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="6" unique_id=42899265]
+position = Vector2(1178, 392)
+
+[node name="rubber peg8" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="7" unique_id=1471703079]
+position = Vector2(1070, 392)
+
+[node name="rubber peg9" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="8" unique_id=1839407671]
+position = Vector2(1124, 392)
+
+[node name="rubber peg12" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="9" unique_id=1079517894]
+position = Vector2(692, 392)
+
+[node name="rubber peg13" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="10" unique_id=1004284984]
+position = Vector2(716, 312)
+
+[node name="rubber peg14" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="11" unique_id=815384638]
+position = Vector2(764, 312)
+
+[node name="rubber peg15" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="12" unique_id=1463696964]
+position = Vector2(812, 312)
+
+[node name="rubber peg17" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="13" unique_id=2130500173]
+position = Vector2(860, 312)
+
+[node name="rubber peg18" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="14" unique_id=996557597]
+position = Vector2(908, 312)
+
+[node name="rubber peg19" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="15" unique_id=16933477]
+position = Vector2(956, 312)
+
+[node name="rubber peg20" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="16" unique_id=1513526674]
+position = Vector2(1004, 312)
+
+[node name="rubber peg21" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="17" unique_id=320172352]
+position = Vector2(1052, 312)
+
+[node name="rubber peg24" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="18" unique_id=1570233245]
+position = Vector2(1100, 312)
+
+[node name="rubber peg25" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="19" unique_id=351912768]
+position = Vector2(620, 264)
+
+[node name="rubber peg26" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="20" unique_id=2066878330]
+position = Vector2(652, 296)
+
+[node name="rubber peg27" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="21" unique_id=926428474]
+position = Vector2(668, 312)
+
+[node name="rubber peg30" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="22" unique_id=667283761]
+position = Vector2(1164, 296)
+
+[node name="rubber peg31" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="23" unique_id=516910572]
+position = Vector2(1180, 280)
+
+[node name="rubber peg32" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="24" unique_id=1975152202]
+position = Vector2(636, 280)
+
+[node name="rubber peg33" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="25" unique_id=3911970]
+position = Vector2(1148, 312)
+
+[node name="rubber peg34" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="26" unique_id=1270945837]
+position = Vector2(1196, 264)
+
+[node name="rubber peg10" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="27" unique_id=61293596]
+position = Vector2(638, 392)
+
+[node name="rubber peg11" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="28" unique_id=1730858165]
+position = Vector2(620, 376)
+
+[node name="rubber peg16" parent="New Body/Node/Rubber Pegs" parent_id_path=PackedInt32Array(1556306142, 1016486081) index="29" unique_id=1522846223]
+position = Vector2(1196, 376)
+
+[node name="peg" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="0" unique_id=1578278439]
+position = Vector2(628, 808)
+
+[node name="peg2" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="1" unique_id=608096815]
+position = Vector2(668, 808)
+
+[node name="peg3" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="2" unique_id=1035429777]
+position = Vector2(708, 808)
+
+[node name="peg4" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="3" unique_id=1216547142]
+position = Vector2(748, 808)
+
+[node name="peg5" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="4" unique_id=1005186394]
+position = Vector2(788, 808)
+
+[node name="peg6" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="5" unique_id=1133877121]
+position = Vector2(828, 808)
+
+[node name="peg7" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="6" unique_id=828218235]
+position = Vector2(868, 808)
+
+[node name="peg8" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="7" unique_id=1231164374]
+position = Vector2(908, 808)
+
+[node name="peg9" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="8" unique_id=937575811]
+position = Vector2(948, 808)
+
+[node name="peg10" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="9" unique_id=1690924949]
+position = Vector2(988, 808)
+
+[node name="peg11" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="10" unique_id=1194121296]
+position = Vector2(1028, 808)
+
+[node name="peg12" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="11" unique_id=349783075]
+position = Vector2(1068, 808)
+
+[node name="peg13" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="12" unique_id=1440911180]
+position = Vector2(1108, 808)
+
+[node name="peg14" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="13" unique_id=16312453]
+position = Vector2(1148, 808)
+
+[node name="peg15" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="14" unique_id=348118521]
+position = Vector2(1188, 808)
+
+[node name="peg16" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="15" unique_id=1022498267]
+position = Vector2(620, 800)
+
+[node name="peg17" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="16" unique_id=879998672]
+position = Vector2(612, 792)
+
+[node name="peg18" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="17" unique_id=1331695870]
+position = Vector2(1196, 800)
+
+[node name="peg19" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="18" unique_id=105084948]
+position = Vector2(1204, 792)
+
+[node name="peg73" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="19" unique_id=782904365]
+position = Vector2(628, 648)
+
+[node name="peg74" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="20" unique_id=1405493926]
+position = Vector2(668, 648)
+
+[node name="peg75" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="21" unique_id=818400101]
+position = Vector2(708, 648)
+
+[node name="peg76" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="22" unique_id=409969455]
+position = Vector2(748, 648)
+
+[node name="peg77" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="23" unique_id=1218561068]
+position = Vector2(788, 648)
+
+[node name="peg78" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="24" unique_id=1415476002]
+position = Vector2(828, 648)
+
+[node name="peg79" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="25" unique_id=1117368212]
+position = Vector2(868, 648)
+
+[node name="peg80" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="26" unique_id=767116185]
+position = Vector2(908, 648)
+
+[node name="peg81" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="27" unique_id=376352164]
+position = Vector2(948, 648)
+
+[node name="peg82" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="28" unique_id=1317505847]
+position = Vector2(988, 648)
+
+[node name="peg83" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="29" unique_id=144724817]
+position = Vector2(1028, 648)
+
+[node name="peg84" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="30" unique_id=695823651]
+position = Vector2(1068, 648)
+
+[node name="peg85" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="31" unique_id=2054406437]
+position = Vector2(1108, 648)
+
+[node name="peg20" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="32" unique_id=45988145]
+position = Vector2(628, 488)
+
+[node name="peg21" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="33" unique_id=40171993]
+position = Vector2(668, 488)
+
+[node name="peg22" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="34" unique_id=1975596040]
+position = Vector2(708, 488)
+
+[node name="peg23" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="35" unique_id=1814608428]
+position = Vector2(748, 488)
+
+[node name="peg24" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="36" unique_id=1150198146]
+position = Vector2(788, 488)
+
+[node name="peg25" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="37" unique_id=1929708454]
+position = Vector2(828, 488)
+
+[node name="peg26" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="38" unique_id=1731410749]
+position = Vector2(868, 488)
+
+[node name="peg27" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="39" unique_id=1054118419]
+position = Vector2(908, 488)
+
+[node name="peg28" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="40" unique_id=1810587638]
+position = Vector2(948, 488)
+
+[node name="peg29" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="41" unique_id=1037314076]
+position = Vector2(988, 488)
+
+[node name="peg30" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="42" unique_id=2118445461]
+position = Vector2(1028, 488)
+
+[node name="peg31" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="43" unique_id=1110640533]
+position = Vector2(1068, 488)
+
+[node name="peg32" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="44" unique_id=1284868292]
+position = Vector2(1108, 488)
+
+[node name="peg33" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="45" unique_id=1432117289]
+position = Vector2(1148, 488)
+
+[node name="peg34" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="46" unique_id=702387376]
+position = Vector2(1188, 488)
+
+[node name="peg35" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="47" unique_id=2072677618]
+position = Vector2(1196, 480)
+
+[node name="peg36" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="48" unique_id=1089599369]
+position = Vector2(1204, 472)
+
+[node name="peg37" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="49" unique_id=749575612]
+position = Vector2(620, 480)
+
+[node name="peg38" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="50" unique_id=693355004]
+position = Vector2(612, 472)
+
+[node name="peg39" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="51" unique_id=377707620]
+position = Vector2(648, 568)
+
+[node name="peg40" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="52" unique_id=2057189995]
+position = Vector2(688, 568)
+
+[node name="peg41" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="53" unique_id=1740647227]
+position = Vector2(728, 568)
+
+[node name="peg42" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="54" unique_id=1092470324]
+position = Vector2(768, 568)
+
+[node name="peg43" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="55" unique_id=1118602029]
+position = Vector2(808, 568)
+
+[node name="peg44" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="56" unique_id=1630698820]
+position = Vector2(848, 568)
+
+[node name="peg45" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="57" unique_id=2110865792]
+position = Vector2(888, 568)
+
+[node name="peg46" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="58" unique_id=922090838]
+position = Vector2(928, 568)
+
+[node name="peg47" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="59" unique_id=84820335]
+position = Vector2(968, 568)
+
+[node name="peg48" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="60" unique_id=890292507]
+position = Vector2(1008, 568)
+
+[node name="peg49" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="61" unique_id=592296406]
+position = Vector2(1048, 568)
+
+[node name="peg50" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="62" unique_id=421825615]
+position = Vector2(1088, 568)
+
+[node name="peg51" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="63" unique_id=1193068325]
+position = Vector2(1128, 568)
+
+[node name="peg52" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="64" unique_id=262457920]
+position = Vector2(1168, 568)
+
+[node name="peg53" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="65" unique_id=1632281044]
+position = Vector2(1148, 648)
+
+[node name="peg54" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="66" unique_id=1901238622]
+position = Vector2(1188, 648)
+
+[node name="peg55" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="67" unique_id=1995502095]
+position = Vector2(1196, 640)
+
+[node name="peg56" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="68" unique_id=1531675574]
+position = Vector2(1204, 632)
+
+[node name="peg57" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="69" unique_id=996890732]
+position = Vector2(620, 640)
+
+[node name="peg58" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="70" unique_id=1291502024]
+position = Vector2(612, 632)
+
+[node name="peg59" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="71" unique_id=1192720761]
+position = Vector2(648, 728)
+
+[node name="peg60" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="72" unique_id=1187458707]
+position = Vector2(688, 728)
+
+[node name="peg61" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="73" unique_id=1574479068]
+position = Vector2(728, 728)
+
+[node name="peg62" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="74" unique_id=518290507]
+position = Vector2(768, 728)
+
+[node name="peg63" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="75" unique_id=292710248]
+position = Vector2(808, 728)
+
+[node name="peg64" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="76" unique_id=646244473]
+position = Vector2(848, 728)
+
+[node name="peg65" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="77" unique_id=701728477]
+position = Vector2(928, 728)
+
+[node name="peg66" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="78" unique_id=168148441]
+position = Vector2(968, 728)
+
+[node name="peg67" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="79" unique_id=882570415]
+position = Vector2(1008, 728)
+
+[node name="peg68" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="80" unique_id=212241144]
+position = Vector2(1048, 728)
+
+[node name="peg69" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="81" unique_id=738239676]
+position = Vector2(1088, 728)
+
+[node name="peg70" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="82" unique_id=2072674803]
+position = Vector2(1128, 728)
+
+[node name="peg71" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="83" unique_id=792760936]
+position = Vector2(888, 728)
+
+[node name="peg72" parent="New Body/Node/Pegs" parent_id_path=PackedInt32Array(1556306142, 662370531) index="84" unique_id=1389549768]
+position = Vector2(1168, 728)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1703661120]
 visible = false
@@ -604,37 +1231,105 @@ texture = ExtResource("9_5c2as")
 physics_material_override = SubResource("PhysicsMaterial_6loxu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1414777808]
-position = Vector2(355.99997, 153)
+position = Vector2(932, 153)
 shape = SubResource("CircleShape2D_5c2as")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1717122096]
-position = Vector2(356, 153.00002)
+position = Vector2(932.00006, 153.00002)
 scale = Vector2(0.09699995, 0.09699995)
 texture = ExtResource("8_6fse3")
 
 [node name="ball" parent="." unique_id=1308688495 instance=ExtResource("7_5c2as")]
-position = Vector2(672, 940)
+position = Vector2(1248, 989)
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1241457814]
-position = Vector2(604, 940)
+position = Vector2(281, 32)
 
 [node name="RampGate" type="StaticBody2D" parent="." unique_id=2115210169]
-position = Vector2(644, 1012)
+position = Vector2(1220, 1012)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RampGate" unique_id=400509493]
 position = Vector2(4, 36)
 shape = SubResource("RectangleShape2D_6fse3")
 
 [node name="SuccessZone" type="Area2D" parent="." unique_id=1935427575]
-position = Vector2(673, 128)
+position = Vector2(675, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SuccessZone" unique_id=1421638869]
-position = Vector2(-20, 22)
+position = Vector2(554, 22)
 rotation = 0.8150688
 shape = SubResource("RectangleShape2D_r4twe")
 
+[node name="extra balls" type="Node" parent="." unique_id=57520809]
+
+[node name="Balls1" parent="extra balls" unique_id=1841025049 instance=ExtResource("7_5c2as")]
+position = Vector2(1205, 1030)
+
+[node name="Balls2" parent="extra balls" unique_id=693302818 instance=ExtResource("7_5c2as")]
+position = Vector2(1175, 1029)
+
+[node name="Balls3" parent="extra balls" unique_id=1109780493 instance=ExtResource("7_5c2as")]
+position = Vector2(1145, 1027)
+
+[node name="Balls4" parent="extra balls" unique_id=702270516 instance=ExtResource("7_5c2as")]
+position = Vector2(1115, 1025)
+
+[node name="Balls5" parent="extra balls" unique_id=988509994 instance=ExtResource("7_5c2as")]
+position = Vector2(1085, 1023)
+
+[node name="Balls6" parent="extra balls" unique_id=527874225 instance=ExtResource("7_5c2as")]
+position = Vector2(1055, 1021)
+
+[node name="Balls7" parent="extra balls" unique_id=88250006 instance=ExtResource("7_5c2as")]
+position = Vector2(1025, 1019)
+
+[node name="Balls8" parent="extra balls" unique_id=1275915404 instance=ExtResource("7_5c2as")]
+position = Vector2(995, 1017)
+
+[node name="Balls9" parent="extra balls" unique_id=2029054332 instance=ExtResource("7_5c2as")]
+position = Vector2(965, 1015)
+
+[node name="Balls10" parent="extra balls" unique_id=1150759251 instance=ExtResource("7_5c2as")]
+position = Vector2(935, 1013)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1818671502]
+position = Vector2(565, 948)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=114874976]
+position = Vector2(-277, -5)
+shape = SubResource("RectangleShape2D_xawfe")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1133277994]
+position = Vector2(-556, -485)
+shape = SubResource("RectangleShape2D_1bj2a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2" unique_id=9475571]
+position = Vector2(-268.5, -940)
+shape = SubResource("RectangleShape2D_axnes")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=651811620]
+polygon = PackedVector2Array(-547, -317, -325, -100, -548, -100)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=102694170]
+polygon = PackedVector2Array(9, -302, -259, -170, -221, -133, -53.461365, -109.16907, 11, -52)
+
+[node name="Balls" parent="StaticBody2D2" unique_id=994760424 instance=ExtResource("7_5c2as")]
+position = Vector2(-305, -117)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=1901042366]
+polygon = PackedVector2Array(-326, -100, -317, -68, 9, -22, -325, -22)
+
+[node name="ToggleGate" type="StaticBody2D" parent="." unique_id=1371094813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToggleGate" unique_id=1398459339]
+position = Vector2(604, 912.5)
+shape = SubResource("RectangleShape2D_w8tqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="ToggleGate" unique_id=777012284]
+
 [connection signal="body_entered" from="Launch zone" to="Launch zone" method="_on_body_entered"]
 [connection signal="body_exited" from="Launch zone" to="Launch zone" method="_on_body_exited"]
+[connection signal="pressed" from="CanvasLayer/ToggleGateButton" to="." method="_on_toggle_gate_button_pressed"]
 [connection signal="body_entered" from="Score Buckets/Score Bucket 1" to="." method="_on_score_bucket_1_body_entered"]
 [connection signal="body_entered" from="Score Buckets/Score Bucket 2" to="." method="_on_score_bucket_2_body_entered"]
 [connection signal="body_entered" from="Score Buckets/Score Bucket 3" to="." method="_on_score_bucket_3_body_entered"]
@@ -649,3 +1344,5 @@ shape = SubResource("RectangleShape2D_r4twe")
 [connection signal="body_entered" from="Score Buckets/Score Bucket 12" to="." method="_on_score_buckets_body_entered"]
 [connection signal="body_entered" from="Score Buckets/Score Bucket 13" to="." method="_on_score_bucket_13_body_entered"]
 [connection signal="body_entered" from="Score Buckets/Score Bucket 14" to="." method="_on_score_bucket_14_body_entered"]
+
+[editable path="New Body"]
